@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>WebView App</title>
+
+    <script>
+
+    </script>
+  </head>
+
+  <body style="background-color: white">
+    <code> Hello Everyone! -  <span id="today"></span></code>
+    </code>
+  </body>
+
+  <script>
+    const today = () => {
+      let today = new Date();
+      let day = today.getDay();
+      let dd = today.getDate();
+      let mm = today.getMonth() + 1;
+      let yyyy = today.getFullYear();
+      if (dd < 10) {
+        dd = "0" + dd;
+      }
+      if (mm < 10) {
+        mm = "0" + mm;
+      }
+
+      var weekday = new Array(7);
+      weekday[0] = "Sunday";
+      weekday[1] = "Monday";
+      weekday[2] = "Tuesday";
+      weekday[3] = "Wednesday";
+      weekday[4] = "Thursday";
+      weekday[5] = "Friday";
+      weekday[6] = "Saturday";
+
+      return weekday[day] + " - " + dd + "-" + mm + "-" + yyyy;
+    };
+
+    document.getElementById("today").innerHTML = today();
+
+  </script>
+</html>
