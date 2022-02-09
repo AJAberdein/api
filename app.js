@@ -9,7 +9,7 @@ const merchantId = "";
 const userId = "";
 const urlPath = ""
 
-app.get('/', (req, res) => res.send('Welcome to VodaPay Mini-Programs!'))
+app.get('/', (req, res) => res.send('Welcome to Mini-Programs!'))
 
 app.get("/app", (req, res) => {
     res.sendFile(path.join(__dirname, "./app.html"));
