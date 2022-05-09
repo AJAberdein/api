@@ -1,11 +1,9 @@
-FROM node:17.0.1-alpine3.12
+FROM node:17
 
 WORKDIR /app
 
-RUN npm install nodemon -g
+COPY package.json /app
 
-COPY package*.json ./
-COPY package.json /usr/src/app/
+RUN npm install
 
-EXPOSE 3000
-CMD ["nodemon", "app.js"]
+COPY . /app
